@@ -1,0 +1,36 @@
+<div id="fb-root"></div>
+
+
+<div class="fb-login-button" data-auto-logout-link="true" data-button-type="continue_with" data-layout="default" data-size="large" data-use-continue-as="false" data-width=""></div>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+<fb:login-button onlogin="checkLoginState();" scope="public_profile,email">
+</fb:login-button>
+
+
+
+<iframe allowtransparency="true" frameborder="0" scrolling="no" src="//www.facebook.com/v13.0/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=634262946633418" style="border: none; height: 80px; overflow: hidden;">
+</iframe>
